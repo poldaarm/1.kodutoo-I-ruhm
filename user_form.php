@@ -29,43 +29,36 @@
             }
             
         }
-        
-    }
+ 	//ega nimi ei ole tÃ¼hi
+		if (empty($_POST["eesnimi"])) {
+			$eesnimi_error = "Palun sisesta eesnimi";
+		}       
+   }
 ?>
-<html>
-    <head>
-        <title>User login page</title>
-    </head>
-    <body>
-        
-        <h2>Login</h2>
-        <form action="user_form.php" method="post">
-            <input name="email" type="email" placeholder="E-post" >* <?php echo $email_error; ?> <br><br>
-            <input name="password" type="password" placeholder="Parool" >* <?php echo $password_error; ?><br><br>
-            
-            <input type ="submit" value="Logi sisse">
-        </form>
-        
-        <h2>Create user</h2>
-        
-    </body>
-</html>
-
 <html>
 	<head>
 		<title>User login page</title>
 	</head>
 	<body>
-		<h2>Login</h2>
-		<form action="user_form.php" method="post">
-				<input name="email" type="email" placeholder="E-post" > <?php echo $email_error; ?>
-				<br><br>
-				<input name="password" type="password" placeholder="Salasõna" > <?php echo $password_error; ?>
-				<input type ="submit" value="Logi sisse">
-		</form>
-		<br><br>
 	
-	<h2>Create user</h2>
+		<h2>Sign up</h2>
+		<form action="user_form.php" method="post">
+			<input name="email" type= "email"  placeholder="E-post" >* <?php echo $email_error; ?> <br> <br>
+			<input name="password" type= "password"  placeholder="Parool" >* <?php echo $password_error; ?> <br> <br>
 		
+			<input type="submit" value= "Logi sisse"> 
+		</form>
+		
+		<h2>Loo kasutaja</h2>
+		<form action="user_form.php" method="post">
+			Sisesta e-posti aadres: <input name="email" type= "email"  placeholder="E-post" >* <?php echo $email_error; ?> <br> <br>
+			Sisesta parool: <input name="password" type= "password"  placeholder="Parool" >* <?php echo $password_error; ?> <br> <br>
+			
+		<input type="submit" value= "Loo kasutaja"> 
+		</form>
+		
+		<h4>Hetkel olen veel ideetu ja üritan alguses ratta veerema saada, aga üritan kiiresti ka mingi visiooni paika panna. :)</h4>
+		
+	
 	</body>
 </html>
